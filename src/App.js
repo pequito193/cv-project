@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import Header from "./components/Header";
 import Editor from "./components/Editor";
-import "./styles/App.css"
 import Info from "./components/Info";
+import "./styles/App.css"
 
 class App extends Component {
 

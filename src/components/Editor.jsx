@@ -10,9 +10,16 @@ class Editor extends Component {
         return (
             <React.Fragment>
                 <div className="editor-wrapper">
-                    <input className="input" type="text" placeholder="First Name" />
-                    <input className="input" type="text" placeholder="Last Name" />
-                    <input className="input" type="number" placeholder="Age" />
+                    <h2 className="editor-title">Personal Info</h2>
+                    <div className="inputs">
+                        <input className="input" type="text" placeholder="First Name" />
+                        <input className="input" type="text" placeholder="Last Name" />
+                        <input className="input" type="text" placeholder="Job Title" />
+                        <input className="input" type="number" placeholder="Phone Number" />
+                        <input className="input" type="email" placeholder="Email" />
+                        <input className="input" type="text" placeholder="Linked In" />
+                        <input className="input" type="text" placeholder="Github Username" />
+                    </div>
                 </div>
             </React.Fragment>
         );

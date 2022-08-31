@@ -20,7 +20,9 @@ class Info extends Component {
                             <p className="email">
                                 <img src={require("./../images/email.png")} alt="" className="icon" />
                             </p>
-                            <p className="phone-number"/>
+                            <p className="linkedin">
+                                <img src={require("./../images/linkedin.png")} alt="" className="icon" />
+                            </p>
                             <p className="github">
                                 <img src={require("./../images/github.png")} alt="" className="icon" />
                             </p>
@@ -36,7 +38,16 @@ class Info extends Component {
                         </div>
                         <div className="relevant-info">
                             <div className="capabilities">
-                                <h3 className="capabilities-title">Knowledge</h3>
+                                <h3 className="right-side-title">
+                                <img src={require("./../images/skill.png")} alt="" className="right-side-icon"/>Knowledge</h3>
+                            </div>
+                            <div className="work-experience">
+                                <h3 className="right-side-title">
+                                <img src={require("./../images/work-experience.png")} alt="" className="work-icon"/>Work Experience</h3>
+                            </div>
+                            <div className="education">
+                                <h3 className="right-side-title">
+                                    <img src={require("./../images/education.png")} alt="" className="right-side-icon"/> Education</h3>
                             </div>
                         </div>
                     </div>

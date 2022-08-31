@@ -27,7 +27,8 @@
     cursor: pointer;
 }
 
-.input:focus {
+.input:focus,
+.input:hover {
     background-color: #ddd;
 }
 

@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div class="wrapper">
+        <div className="wrapper">
           <Info />
           <Editor />
         </div>

@@ -1,11 +1,12 @@
 body {
     margin: 0;
-    background-color: #eee;
+    background-color: #ddd;
 }
 
 .wrapper {
     display: flex;
-    justify-content: space-around;
-    margin: 50px 150px;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin: 50px 140px;
     gap: 100px;
 }

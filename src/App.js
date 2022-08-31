@@ -1,11 +1,26 @@
-import './App.css';
+import React, {Component} from "react";
+import Header from "./components/Header";
+import Editor from "./components/Editor";
+import "./styles/App.css"
+import Info from "./components/Info";
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
 
-    </div>
-  );
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <div class="wrapper">
+          <Info />
+          <Editor />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

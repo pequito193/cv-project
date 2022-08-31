@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 150px;
+    gap: 100px;
+}

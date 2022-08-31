@@ -17,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     gap: 8vh;
+    min-width: fit-content;
 }
 
 .face-photo {
@@ -51,6 +52,7 @@
     display: grid;
     grid-template-rows: 20% 80%;
     padding: 30px;
+    min-width: fit-content;
 }
 
 .name-and-title {

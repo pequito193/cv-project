@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Header from "./components/Header";
-import Editor from "./components/Editor";
-import Info from "./components/Info";
+import ParentWrapper from "./components/ParentWrapper";
 import "./styles/App.css"
 
 class App extends Component {
@@ -15,8 +14,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="wrapper">
-          <Info />
-          <Editor />
+          <ParentWrapper />
         </div>
       </div>
     );

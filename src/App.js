@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Header from "./components/Header";
-import ParentWrapper from "./components/ParentWrapper";
+import Curriculum from "./components/Curriculum";
 import "./styles/App.css"
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="wrapper">
-          <ParentWrapper />
+          <Curriculum />
         </div>
       </div>
     );

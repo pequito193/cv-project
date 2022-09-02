@@ -12,26 +12,31 @@ class Info extends Component {
 
         return (
             <React.Fragment>
-                <div className="curriculum">
+                <div className="info">
                     <div className="left-side">
                         <div className="face-photo" />
                         <div className="contacts">
                             <h3 className="side-title">Contacts</h3>
-                            <p className="phone-number">
-                                <img src={require("./../images/phone.png")} alt="" className="icon" />{phoneNumber}
-                            </p>
-                            <p className="email">
-                                <img src={require("./../images/email.png")} alt="" className="icon" />{email}
-                            </p>
-                            <p className="linkedin">
-                                <img src={require("./../images/linkedin.png")} alt="" className="icon" />{linkedIn}
-                            </p>
-                            <p className="github">
-                                <img src={require("./../images/github.png")} alt="" className="icon" />{gitHub}
-                            </p>
-                            <p className="website">
-                                <img src={require("./../images/website.png")} alt="" className="icon" />{personalWebsite}
-                            </p>
+                            <div className="contact-wrapper">
+                                <img src={require("./../images/phone.png")} alt="" className="icon" />
+                                <p className="phone-number output">{phoneNumber}</p>
+                            </div>
+                            <div className="contact-wrapper">
+                                <img src={require("./../images/email.png")} alt="" className="icon" />
+                                <p className="email output">{email}</p>
+                            </div>
+                            <div className="contact-wrapper">
+                                <img src={require("./../images/linkedin.png")} alt="" className="icon" />
+                                <p className="linkedin output">{linkedIn}</p>
+                            </div>
+                            <div className="contact-wrapper">
+                                <img src={require("./../images/github.png")} alt="" className="icon" />
+                                <p className="github output">github.com/{gitHub}</p>
+                            </div>
+                            <div className="contact-wrapper">
+                                <img src={require("./../images/website.png")} alt="" className="icon" />
+                                <p className="website output">{personalWebsite}</p>
+                            </div>
                         </div>
                         <div className="languages">
                             <h3 className="side-title">Languages</h3>
@@ -39,8 +44,8 @@ class Info extends Component {
                     </div>
                     <div className="right-side">
                         <div className="name-and-title">
-                            <h2 className="first-and-last-name">{firstName} {lastName}</h2>
-                            <h3 className="job-title">{jobTitle}</h3>
+                            <h2 className="first-and-last-name main-output">{firstName} {lastName}</h2>
+                            <h3 className="job-title main-output">{jobTitle}</h3>
                         </div>
                         <div className="relevant-info">
                             <div className="capabilities">
@@ -60,6 +65,7 @@ class Info extends Component {
                 </div>
             </React.Fragment>
         );
+        
     }
 }
 

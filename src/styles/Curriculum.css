@@ -43,3 +43,13 @@
 .input[type=number] {
   -moz-appearance: textfield;
 }
+
+.new-language {
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}

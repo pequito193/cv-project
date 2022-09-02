@@ -8,7 +8,7 @@ class Info extends Component {
 
     render() {
 
-        const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite} = this.props;
+        const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite, languages} = this.props;
 
         return (
             <React.Fragment>
@@ -65,7 +65,7 @@ class Info extends Component {
                 </div>
             </React.Fragment>
         );
-        
+
     }
 }
 

@@ -7,7 +7,7 @@ class Info extends Component {
     }
 
     render() {
-        
+
         const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite} = this.props;
 
         return (

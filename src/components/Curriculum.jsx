@@ -33,10 +33,15 @@ class Curriculum extends Component {
 
     handleNewLanguage(e) {
         e.preventDefault();
-        this.setState({
-            languages: this.state.languages.concat(),
-        });
+        if (e.target[0].value.length > 0) {
+            this.setState({
+                languages: this.state.languages.concat(e.target[0].value),
+            });
+            e.target[0].value = '';
+            console.log(this.state);
+        }
     }
+
 
     render() {
 
@@ -57,8 +62,8 @@ class Curriculum extends Component {
                 </div>
                 <h2 className="editor-title">Add Languages</h2>
                 {/* <Languages /> */}
-                <form className="language-button-wrapper">
-                    <input className="input personal-website" name="language" onSubmit={this.handleNewLanguage} type="url" placeholder="Language" />
+                <form className="language-button-wrapper" onSubmit={this.handleNewLanguage}>
+                    <input className="input" name="language" type="text" placeholder="Language" />
                     <button type="submit" className="new-language">Add Language</button>
                 </form>
             </div>

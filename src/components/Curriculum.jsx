@@ -38,7 +38,6 @@ class Curriculum extends Component {
                 languages: this.state.languages.concat(e.target[0].value),
             });
             e.target[0].value = '';
-            console.log(this.state);
         }
     }
 
@@ -61,7 +60,7 @@ class Curriculum extends Component {
                     <input className="input personal-website" name="personalWebsite" onChange={this.handleInputChange} type="url" placeholder="Personal Website" />
                 </div>
                 <h2 className="editor-title">Add Languages</h2>
-                {/* <Languages /> */}
+                <Languages languages={this.state.languages} />
                 <form className="language-button-wrapper" onSubmit={this.handleNewLanguage}>
                     <input className="input" name="language" type="text" placeholder="Language" />
                     <button type="submit" className="new-language">Add Language</button>

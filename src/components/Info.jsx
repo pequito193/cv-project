@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./../styles/Info.css"
 
 class Info extends Component {
+
     constructor(props) {
         super(props);
     }
@@ -9,6 +10,15 @@ class Info extends Component {
     render() {
 
         const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite, languages} = this.props;
+
+        const languageList = [];
+
+        for (let i = 0; i < languages.length; i++) {
+            languageList.push(
+                <p>{languages[i]}</p>
+            )
+            console.log(languageList, languages)
+        }
 
         return (
             <React.Fragment>
@@ -40,6 +50,9 @@ class Info extends Component {
                         </div>
                         <div className="languages">
                             <h3 className="side-title">Languages</h3>
+                            <div className="language-wrapper">
+                                {languageList}
+                            </div>
                         </div>
                     </div>
                     <div className="right-side">

@@ -1,21 +1,21 @@
-// import React, {Component} from "react";
+import React, {Component} from "react";
 
-// class Languages extends Component(languages) {
+class Languages extends Component {
+
+    constructor(props) {
+        super(props);
+    }
     
-//     render() {
+    render() {
 
-//         const { languages } = languages;
+        return (
+            <React.Fragment>
+                <div className="language-list">
 
-//         return 
-//         (
-//             <ul className="language-list">
-//                 {languages.map((language) => {
-//                     return <li>{language.text}</li>
-//                 })}
-//             </ul>
-//         );
+                </div>
+            </React.Fragment>
+        );
+    }
+}
 
-//     }
-// }
-
-// export default Languages;
+export default Languages;

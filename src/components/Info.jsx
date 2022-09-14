@@ -15,9 +15,8 @@ class Info extends Component {
 
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
-                <p>{languages[i]}</p>
+                <p className="languages-known">{languages[i]}</p>
             )
-            console.log(languageList, languages)
         }
 
         return (
@@ -49,7 +48,7 @@ class Info extends Component {
                             </div>
                         </div>
                         <div className="languages">
-                            <h3 className="side-title">Languages</h3>
+                            <h3 className="side-title language-title">Languages</h3>
                             <div className="language-wrapper">
                                 {languageList}
                             </div>

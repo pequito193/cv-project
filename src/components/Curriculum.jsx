@@ -34,8 +34,9 @@ class Curriculum extends Component {
     handleNewLanguage(e) {
         e.preventDefault();
         if (e.target[0].value.length > 0) {
+            const language = e.target[0].value.charAt(0).toUpperCase() + e.target[0].value.slice(1);
             this.setState({
-                languages: this.state.languages.concat(e.target[0].value),
+                languages: this.state.languages.concat(language),
             });
             e.target[0].value = '';
         }
@@ -59,11 +60,11 @@ class Curriculum extends Component {
                     <input className="input git-hub" name="gitHub" onChange={this.handleInputChange} type="url" placeholder="Github Username" />
                     <input className="input personal-website" name="personalWebsite" onChange={this.handleInputChange} type="url" placeholder="Personal Website" />
                 </div>
-                <h2 className="editor-title">Add Languages</h2>
+                <h2 className="editor-title">Add Language</h2>
                 <Languages languages={this.state.languages} />
                 <form className="language-button-wrapper" onSubmit={this.handleNewLanguage}>
                     <input className="input" name="language" type="text" placeholder="Language" />
-                    <button type="submit" className="new-language">Add Language</button>
+                    <button type="submit" className="new-language">Add</button>
                 </form>
             </div>
         </React.Fragment>

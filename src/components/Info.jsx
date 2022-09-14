@@ -3,10 +3,6 @@ import "./../styles/Info.css"
 
 class Info extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite, languages} = this.props;
@@ -15,7 +11,7 @@ class Info extends Component {
 
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
-                <p className="languages-known">{languages[i]}</p>
+                <p key={languages[i]} className="languages-known">{languages[i]}</p>
             )
         }
 

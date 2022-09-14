@@ -12,6 +12,8 @@ class Curriculum extends Component {
 
         this.handleNewLanguage = this.handleNewLanguage.bind(this);
 
+        this.handleRemoveLanguage = this.handleRemoveLanguage.bind(this);
+
         this.state = {
             firstName: '',
             lastName: '',
@@ -42,6 +44,10 @@ class Curriculum extends Component {
         }
     }
 
+    handleRemoveLanguage(e) {
+        console.log('hi');
+    }
+
 
     render() {
 
@@ -61,11 +67,11 @@ class Curriculum extends Component {
                     <input className="input personal-website" name="personalWebsite" onChange={this.handleInputChange} type="url" placeholder="Personal Website" />
                 </div>
                 <h2 className="editor-title">Add Language</h2>
-                <Languages languages={this.state.languages} />
                 <form className="language-button-wrapper" onSubmit={this.handleNewLanguage}>
                     <input className="input" name="language" type="text" placeholder="Language" />
                     <button type="submit" className="new-language">Add</button>
                 </form>
+                <Languages removeLanguage={this.handleRemoveLanguage} languages={this.state.languages} />
             </div>
         </React.Fragment>
         )    

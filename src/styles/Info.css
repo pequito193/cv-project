@@ -5,7 +5,7 @@
     width: 750px;
     border-radius: 6px;
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 262.5px 1fr;
     overflow-wrap: break-word;
 }
 
@@ -88,7 +88,7 @@
 .right-side {
     display: grid;
     grid-template-rows: min-content 80%;
-    padding: 30px;
+    padding: 20px;
     min-width: fit-content;
     margin-left: 30px;
 }

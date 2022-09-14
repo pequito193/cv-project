@@ -1,6 +1,7 @@
 .editor-wrapper {
     height: fit-content;
     width: 30vw;
+    max-width: 750px;
     padding: 0 30px 40px;
     border-radius: 6px;
     box-shadow: 4px 4px 4px rgb(184, 184, 184);

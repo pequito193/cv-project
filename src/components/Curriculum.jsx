@@ -27,16 +27,20 @@ class Curriculum extends Component {
         };
     }
 
+    // Updates the component's state with the newly written inputs
     handleInputChange(e) {
         const inputField = e.target.name;
         const value = e.target.value;
         this.setState({[inputField]: value});
     }
 
+    // Checks if all conditions are met, and then adds the new language to 'languages' in the state
     handleNewLanguage(e) {
         e.preventDefault();
-        if (e.target[0].value.length > 0) {
-            const language = e.target[0].value.charAt(0).toUpperCase() + e.target[0].value.slice(1);
+        const newLanguage = e.target[0].value;
+        if (newLanguage.length > 0) {
+            const language = newLanguage.charAt(0).toUpperCase() + newLanguage.slice(1);
+            if (this.state.languages.includes(language)) return;
             this.setState({
                 languages: this.state.languages.concat(language),
             });
@@ -44,6 +48,7 @@ class Curriculum extends Component {
         }
     }
 
+    // Maps over existing languages to remove the one whose remove button is clicked
     handleRemoveLanguage(e) {
         const languageToRemove = e.target.id;
         const newLanguagesArray = this.state.languages.filter((name) => name != languageToRemove);

@@ -45,7 +45,11 @@ class Curriculum extends Component {
     }
 
     handleRemoveLanguage(e) {
-        console.log('hi');
+        const languageToRemove = e.target.id;
+        const newLanguagesArray = this.state.languages.filter((name) => name != languageToRemove);
+            this.setState({
+                languages: newLanguagesArray,
+            })
     }
 
 

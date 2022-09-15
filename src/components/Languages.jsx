@@ -5,13 +5,13 @@ class Languages extends Component {
     
     render() {
 
-        const {languages, handleRemoveLanguage} = this.props;
+        const {languages, removeLanguage} = this.props;
 
         const languageList = [];
 
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
-                <p key={languages[i]} className="languages-known-editor">{languages[i]} <img onClick={handleRemoveLanguage} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
+                <p key={languages[i]} className="languages-known-editor">{languages[i]} <img onClick={removeLanguage} id={languages[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
             )
         }
 

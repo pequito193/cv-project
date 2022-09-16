@@ -1,8 +1,12 @@
-.languages-known-editor {
+.inputs-editor {
     font-size: 1.125rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
     gap: 14px;
+    width: 660px;
+    overflow: hidden;
 }
 
 .remove-button {

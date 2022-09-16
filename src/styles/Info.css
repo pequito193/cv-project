@@ -5,7 +5,7 @@
     width: 750px;
     border-radius: 6px;
     display: grid;
-    grid-template-columns: 262.5px 1fr;
+    grid-template-columns: 262.5px 487.5px;
     overflow-wrap: break-word;
 }
 
@@ -96,6 +96,7 @@
 .name-and-title {
     border-bottom: 2px solid black;
     height: fit-content;
+    width: 75%;
 }
 
 .first-and-last-name {
@@ -124,20 +125,7 @@
     width: auto;
 }
 
-@media (max-width: 1400px) {
-    .info {
-        width: 750px;
-    }
-}
-
-@media (max-width: 850px) {
-    .info {
-        width: 700px;
-    }
-}
-
-@media (max-width: 740px) {
-    .info {
-        width: 650px;
-    }
+.details {
+    word-wrap: break-word;
+    max-width: 400px;
 }

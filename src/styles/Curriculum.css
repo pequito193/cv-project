@@ -45,7 +45,7 @@
   -moz-appearance: textfield;
 }
 
-.new-language {
+.new-input {
     border: 2px solid black;
     color: white;
     background-color: rgb(50, 50, 50);
@@ -57,20 +57,18 @@
     margin-left: 10px;
 }
 
-@media (max-width: 1400px) {
+.new-input:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 1500px) {
     .editor-wrapper {
         width: 690px;
-    }
-}
-
-@media (max-width: 850px) {
-    .editor-wrapper {
-        width: 640px;
-    }
-}
-
-@media (max-width: 740px) {
-    .editor-wrapper {
-        width: 590px;
     }
 }

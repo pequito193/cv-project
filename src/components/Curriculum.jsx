@@ -69,7 +69,6 @@ class Curriculum extends Component {
         } else if (e.target.alt === 'education-remove-button') {
             inputField = 'education';
         }
-        console.log(e.target.alt);
         const newInputsArray = this.state[inputField].filter((name) => name !== inputToRemove);
             this.setState({
                 [inputField]: newInputsArray,

@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import Info from "./Info";
 import Languages from "./Languages";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Education from "./Education";
 import "./../styles/Curriculum.css"
 
 class Curriculum extends Component {
@@ -12,7 +15,9 @@ class Curriculum extends Component {
 
         this.handleNewLanguage = this.handleNewLanguage.bind(this);
 
-        this.handleRemoveLanguage = this.handleRemoveLanguage.bind(this);
+        this.handleRemoveInput = this.handleRemoveInput.bind(this);
+        
+        this.handleNewInput = this.handleNewInput.bind(this);
 
         this.state = {
             firstName: '',
@@ -23,7 +28,10 @@ class Curriculum extends Component {
             linkedIn: '',
             gitHub: '',
             personalWebsite: '',
-            languages: []
+            languages: [],
+            skills: [],
+            experience: [],
+            education: [],
         };
     }
 
@@ -49,12 +57,28 @@ class Curriculum extends Component {
     }
 
     // Maps over existing languages to remove the one whose remove button is clicked
-    handleRemoveLanguage(e) {
-        const languageToRemove = e.target.id;
-        const newLanguagesArray = this.state.languages.filter((name) => name != languageToRemove);
+    handleRemoveInput(e) {
+        const inputToRemove = e.target.id;
+        const inputField = e.target.props;
+        const newInputsArray = this.state[inputField].filter((name) => name !== inputToRemove);
             this.setState({
-                languages: newLanguagesArray,
+                [inputField]: newInputsArray,
             })
+    }
+
+
+    // Receives new input and sets the state depending on which input was accessed
+    handleNewInput(e) {
+        e.preventDefault();
+        const inputField = e.target[0].name;
+        const newInput = e.target[0].value;
+        if (newInput.length > 0) {
+            if (this.state[inputField].includes(newInput)) return;
+            this.setState({
+                [inputField]: this.state[inputField].concat(newInput),
+            });
+            e.target[0].value = '';
+        } 
     }
 
 
@@ -76,11 +100,35 @@ class Curriculum extends Component {
                     <input className="input personal-website" name="personalWebsite" onChange={this.handleInputChange} type="url" placeholder="Personal Website" />
                 </div>
                 <h2 className="editor-title">Add Language</h2>
-                <form className="language-button-wrapper" onSubmit={this.handleNewLanguage}>
+                <form onSubmit={this.handleNewLanguage}>
                     <input className="input" name="language" type="text" placeholder="Language" />
-                    <button type="submit" className="new-language">Add</button>
+                    <button type="submit" className="new-input">Add</button>
                 </form>
-                <Languages removeLanguage={this.handleRemoveLanguage} languages={this.state.languages} />
+                <Languages removeLanguage={this.handleRemoveInput} languages={this.state.languages} />
+                <h2 className="editor-title">Skills, Experience, Education</h2>
+                <div className="details-wrapper">
+                    <div>
+                        <form onSubmit={this.handleNewInput}>
+                            <input className="input" name="skills" type="text" placeholder="Skills" />
+                            <button type="submit" className="new-input">Add</button>
+                        </form>
+                        <Skills removeInput={this.handleRemoveInput} skills={this.state.skills} />
+                    </div>
+                    <div>
+                        <form onSubmit={this.handleNewInput}>
+                            <input className="input" name="experience" type="text" placeholder="Experience" />
+                            <button type="submit" className="new-input">Add</button>
+                        </form>
+                        <Experience removeInput={this.handleRemoveInput} experience={this.state.experience} />
+                    </div>
+                    <div>
+                        <form onSubmit={this.handleNewInput}>
+                            <input className="input" name="education" type="text" placeholder="Education" />
+                            <button type="submit" className="new-input">Add</button>
+                        </form>
+                        <Education removeInput={this.handleRemoveInput} education={this.state.education} />
+                    </div>
+                </div>
             </div>
         </React.Fragment>
         )    

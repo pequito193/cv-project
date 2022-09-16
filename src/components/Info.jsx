@@ -5,15 +5,39 @@ class Info extends Component {
 
     render() {
 
-        const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite, languages} = this.props;
+        const {firstName, lastName, jobTitle, phoneNumber, email, linkedIn, gitHub, personalWebsite, languages, skills, experience, education} = this.props;
 
         const languageList = [];
-
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
                 <p key={languages[i]} className="languages-known">{languages[i]}</p>
             )
         }
+
+
+        const skillsList = [];
+        for (let i = 0; i < skills.length; i++) {
+            skillsList.push(
+                <p key={skills[i]} className="details">{skills[i]}</p>
+            )
+        }
+
+
+        const experienceList = [];
+        for (let i = 0; i < experience.length; i++) {
+            experienceList.push(
+                <p key={experience[i]} className="details">{experience[i]}</p>
+            )
+        }
+
+
+        const educationList = [];
+        for (let i = 0; i < education.length; i++) {
+            educationList.push(
+                <p key={education[i]} className="details">{education[i]}</p>
+            )
+        }
+
 
         return (
             <React.Fragment>
@@ -56,17 +80,17 @@ class Info extends Component {
                             <h3 className="job-title main-output">{jobTitle}</h3>
                         </div>
                         <div className="relevant-info">
-                            <div className="capabilities">
-                                <h3 className="right-side-title">
-                                <img src={require("./../images/skill.png")} alt="" className="right-side-icon"/>Knowledge</h3>
+                            <div className="skills">
+                                <h3 className="right-side-title"><img src={require("./../images/skill.png")} alt="" className="right-side-icon"/>Skills</h3>
+                                {skillsList}
                             </div>
-                            <div className="work-experience">
-                                <h3 className="right-side-title">
-                                <img src={require("./../images/work-experience.png")} alt="" className="work-icon"/>Work Experience</h3>
+                            <div className="experience">
+                                <h3 className="right-side-title"><img src={require("./../images/work-experience.png")} alt="" className="work-icon"/>Work Experience</h3>
+                                {experienceList}
                             </div>
                             <div className="education">
-                                <h3 className="right-side-title">
-                                    <img src={require("./../images/education.png")} alt="" className="right-side-icon"/> Education</h3>
+                                <h3 className="right-side-title"><img src={require("./../images/education.png")} alt="" className="right-side-icon"/> Education</h3>
+                                {educationList}
                             </div>
                         </div>
                     </div>

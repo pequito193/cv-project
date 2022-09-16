@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./../styles/Languages.css"
+import "./../styles/RemovableInputs.css"
 
 class Languages extends Component {
     
@@ -11,14 +11,14 @@ class Languages extends Component {
 
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
-                <p key={languages[i]} className="languages-known-editor">{languages[i]} <img onClick={removeLanguage} id={languages[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
+                <p key={languages[i]} className="inputs-editor">{languages[i]} <img onClick={removeLanguage} id={languages[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
             )
         }
 
 
         return (
             <React.Fragment>
-                <div className="language-list">
+                <div>
                     {languageList}
                 </div>
             </React.Fragment>

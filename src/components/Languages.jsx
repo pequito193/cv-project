@@ -11,7 +11,7 @@ class Languages extends Component {
 
         for (let i = 0; i < languages.length; i++) {
             languageList.push(
-                <p key={languages[i]} className="inputs-editor">{languages[i]} <img onClick={removeLanguage} id={languages[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
+                <p key={languages[i]} className="inputs-editor">{languages[i]} <img onClick={removeLanguage} id={languages[i]} className="remove-button" src={require("./../images/remove.png")} alt='language-remove-button' /> </p>
             )
         }
 

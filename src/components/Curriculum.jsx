@@ -59,7 +59,17 @@ class Curriculum extends Component {
     // Maps over existing languages to remove the one whose remove button is clicked
     handleRemoveInput(e) {
         const inputToRemove = e.target.id;
-        const inputField = e.target.props;
+        let inputField;
+        if (e.target.alt === 'language-remove-button') {
+            inputField = 'languages';
+        } else if (e.target.alt === 'skills-remove-button') {
+            inputField = 'skills';
+        } else if (e.target.alt === 'experience-remove-button') {
+            inputField = 'experience';
+        } else if (e.target.alt === 'education-remove-button') {
+            inputField = 'education';
+        }
+        console.log(e.target.alt);
         const newInputsArray = this.state[inputField].filter((name) => name !== inputToRemove);
             this.setState({
                 [inputField]: newInputsArray,
@@ -78,7 +88,7 @@ class Curriculum extends Component {
                 [inputField]: this.state[inputField].concat(newInput),
             });
             e.target[0].value = '';
-        } 
+        }
     }
 
 

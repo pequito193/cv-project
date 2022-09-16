@@ -11,7 +11,7 @@ class Experience extends Component {
 
         for (let i = 0; i < experience.length; i++) {
             experienceList.push(
-                <p key={experience[i]} className="inputs-editor">{experience[i]} <img onClick={removeInput} id={experience[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
+                <p key={experience[i]} className="inputs-editor">{experience[i]} <img onClick={removeInput} id={experience[i]} className="remove-button" src={require("./../images/remove.png")} alt='experience-remove-button' /> </p>
             )
         }
 

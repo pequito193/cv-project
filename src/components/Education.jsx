@@ -11,7 +11,7 @@ class Education extends Component {
 
         for (let i = 0; i < education.length; i++) {
             educationList.push(
-                <p key={education[i]} className="inputs-editor">{education[i]} <img onClick={removeInput} id={education[i]} className="remove-button" src={require("./../images/remove.png")} alt='' /> </p>
+                <p key={education[i]} className="inputs-editor">{education[i]} <img onClick={removeInput} id={education[i]} className="remove-button" src={require("./../images/remove.png")} alt='education-remove-button' /> </p>
             )
         }
 

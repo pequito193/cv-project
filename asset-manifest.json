@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cv-project/static/css/main.5b440c41.css",
+    "main.js": "/cv-project/static/js/main.ba431f57.js",
+    "static/media/website.png": "/cv-project/static/media/website.36e054206c25378629e7.png",
+    "static/media/skill.png": "/cv-project/static/media/skill.d2e9e5c7a036d924d9ba.png",
+    "static/media/github.png": "/cv-project/static/media/github.f11021803f68852df283.png",
+    "static/media/email.png": "/cv-project/static/media/email.2c378c9ee25927123f7d.png",
+    "index.html": "/cv-project/index.html",
+    "main.5b440c41.css.map": "/cv-project/static/css/main.5b440c41.css.map",
+    "main.ba431f57.js.map": "/cv-project/static/js/main.ba431f57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b440c41.css",
+    "static/js/main.ba431f57.js"
+  ]
+}
